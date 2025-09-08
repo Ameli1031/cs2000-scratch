@@ -11,6 +11,9 @@ grid
 orange-trian = triangle(35, "solid", "orange")
 orange-trian
 
-length = 55
-color = blue
-triangle(length, "solid", "color")
+my-length = 30
+color = "blue"
+square(my-length, "solid", color)
+
+ = 99
+square(my-length, "solid", color)
