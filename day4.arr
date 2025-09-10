@@ -1,5 +1,12 @@
 use context dcic2024
-#Amrmania
+fun welcome(name :: String) -> String:
+  doc: "combines the welcome message with a name"
+  "Welcome to class, " + name
+end
+welcome("Ameli")
+name = "Rush"
+
+#flag
 fun three-stripe-flag(top :: String,
       middle :: String,
       bottom :: String) -> Image:
@@ -21,6 +28,21 @@ where:
 end
 moon-weight(90)
 
-cloak= beside(rotate(65, triangle-ass(45, 50, 220, "solid", "crimson")), rotate(-65, flip-horizontal(triangle-ass(45, 40, 220, "solid", "crimson"))))
-step-5 = underlay-xy(rotate(-30, cloak), 0, -90, step-4)
-step-5
+#cake
+fun three-layer-cake(top :: String,
+    middle :: String, 
+    bottom :: String) -> Image:
+  frame(
+    above(rectangle(120, 30, "solid", top), 
+      above(rectangle(120, 30, "solid", middle),
+        rectangle(123, 30, "solid", bottom))))
+end
+three-layer-cake("pink", "red", "yellow")
+
+#shirt-cost
+  fun order-coffees(qty :: Number) ->
+    Number
+    doc: "Computes the total cost of coffees"
+    coffe-cost = 4
+    qty * coffee-cost
+  end
