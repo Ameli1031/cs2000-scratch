@@ -1,6 +1,9 @@
 use context dcic2024
+#HW 1
 body = rotate(-30, ellipse(120, 310, "solid", "yellow"))
-headwear = rotate(160, triangle-asa(40, 100, 90, "solid", "black" ))
+rec-1 = rectangle(50, 80, "solid", "black)
+  rec-1
+headwear = rotate(0, triangle-asa(40, 130, 40, "solid", "black" ))
 step-1 = overlay-xy(headwear, -127, -10, body)
 step-1
 
@@ -22,9 +25,12 @@ cloth2 = overlay-align("middle", "middle", belt, cloth)
 step-4 = overlay-xy(cloth2, -30, -150, step-3)
 step-4
 
-cloak= beside(rotate(65, triangle-ass(45, 40, 220, "solid", "crimson")), rotate(-65, flip-horizontal(triangle-ass(45, 40, 220, "solid", "crimson"))))
-cloak
-
+cloak-2 = triangle-ass(45, 50, 220, "solid", "crimson")
+cloak-3 = flip-horizontal(triangle-ass(45, 50, 220, "solid", "crimson"))
+step-5 = underlay-xy(rotate(45, cloak-2), 40, -90, step-4)
+step-5
+doll = underlay-xy(rotate(-95, cloak-3), -180, -130, step-5)
+doll
 
 
 
