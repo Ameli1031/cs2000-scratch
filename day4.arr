@@ -17,14 +17,10 @@ fun three-stripe-flag(top :: String,
 end
 three-stripe-flag("yellow", "blue", "red")
 
-
+#moon weight
 fun moon-weight(earth-weight :: Number) -> Number:
   doc: "Compute weight on moon from weight on earth"
   earth-weight * 1/6
-where:
-  moon-weight(100) is 100 * 1/6
-  moon-weight(150) is 150 * 1/6
-  moon-weight(90) is 90 * 1/6
 end
 moon-weight(90)
 
@@ -39,10 +35,19 @@ fun three-layer-cake(top :: String,
 end
 three-layer-cake("pink", "red", "yellow")
 
-#shirt-cost
-  fun order-coffees(qty :: Number) ->
-    Number
-    doc: "Computes the total cost of coffees"
-    coffe-cost = 4
-    qty * coffee-cost
+#cost of coffee
+  fun order-coffees(qty :: Number) ->   Num
+b:doc: "Computes the total coffee cost"
+    qty * 4
   end
+
+#tshirt cost
+fun tshirt-cost(message :: String) -> Number:
+doc: "Compute tyhhe total tshirt cost of printing tshirt, while 5 is the fixed cost of tshirt and 0.1 is the cost of printing each tshirt"
+5 * +0.0.1 * string-length(message))
+end
+tshirt-cost("Go Team!")
+tshirt-cost("Hello World!")
+
+
+ 
