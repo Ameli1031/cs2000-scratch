@@ -16,7 +16,6 @@ where:
   choose-hat(100) is "sun hat"
   choose-hat(60) is "no hat"
 end
-choose-hat(90)
 
 #winter hat
 fun choose-winter-hat(tem-in-F :: Number) -> String:
@@ -36,7 +35,6 @@ where:
   choose-winter-hat(30) is "winter hat"
   choose-winter-hat(70) is "no hat"
 end
-choose-winter-hat(70)
 
 #add glasses
 fun add-glasses(outfit :: String) -> String:
@@ -50,7 +48,6 @@ add-glasses("shoes") is "shoes and glasses"
 add-glasses("tshirt") is "tshirt and glasses"
 add-glasses("dress") is "dress and glasses"
 end
-add-glasses("outfit")
 
 #choose outfit
 fun choose-outfit(tem-in-F :: Number) -> String:
@@ -70,7 +67,6 @@ where:
   choose-outfit(20) is "winter hat and glasses"
   choose-outfit(60) is "no hat and glasses"
 end
-choose-outfit(60)
 
 #choose hat or visor
 fun choose-hat-or-visor(has-visor :: Boolean, tem-in-F :: Number) -> String:
@@ -79,16 +75,18 @@ fun choose-hat-or-visor(has-visor :: Boolean, tem-in-F :: Number) -> String:
     has-visor,
     tem-in-F
   end
-  if ("has-visor" and tem-in-F) >= 95:
+  if has-visor and (tem-in-F >= 95):
     "visor"
   else:
     choose-winter-hat(tem-in-F)
   end
 where:
   choose-hat-or-visor(true, 100) is "visor"
-  choose-hat-or-visor(false, 100) is "hat"
-  choose-hat-or-visor(true, 90) is "hat"
-  choose-hat-or-visor(false, 90) is "hat"
+  choose-hat-or-visor(false, 100) is "sun hat"
+  choose-hat-or-visor(true, 90) is "sun hat"
+  choose-hat-or-visor(false, 90) is "sun hat"
+  choose-hat-or-visor(false, 30) is "winter hat"
 end
 choose-hat-or-visor(false, 100)
+choose-hat-or-visor(false, 30)
     
