@@ -20,7 +20,7 @@ end
 #winter hat
 fun choose-winter-hat(tem-in-F :: Number) -> String:
   doc: "Wear winter hat when tem < 50F, wear sun hat when tem > 80F, if else wearing no hat"
-spy:
+  spy:
     tem-in-F
   end
   if tem-in-F >= 80:
