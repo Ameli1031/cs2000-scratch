@@ -36,18 +36,15 @@ end
 three-layer-cake("pink", "red", "yellow")
 
 #cost of coffee
-  fun order-coffees(qty :: Number) ->   Num
-b:doc: "Computes the total coffee cost"
+fun order-coffees(qty :: Number) -> Number:
+  doc: "Computes the total coffee cost"
     qty * 4
   end
 
 #tshirt cost
 fun tshirt-cost(message :: String) -> Number:
-doc: "Compute tyhhe total tshirt cost of printing tshirt, while 5 is the fixed cost of tshirt and 0.1 is the cost of printing each tshirt"
-5 * +0.0.1 * string-length(message))
+  doc: "Compute the total tshirt cost of printing tshirt, while 5 is the fixed cost of tshirt and 0.1 is the cost of printing each tshirt"
+  5 + (0.1 * string-length(message))
 end
 tshirt-cost("Go Team!")
 tshirt-cost("Hello World!")
-
-
- 
