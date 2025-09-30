@@ -21,7 +21,7 @@ where:
 end
 
 #我创造了一个新的table用了我前面创造的function
-new-customers = table: age
+new-customers = table: age, 
   row: 90
   row: 1
   row: 30
@@ -30,6 +30,19 @@ new-customers = table: age
   row: 9
 end
 young-customers(new-customers)
+
+fun marketing-summary(t :: table) -> Table:
+  doc: "adds a new column that indicates an age group under 25, 25-35, over 35"
+  
+  fun is-age(r :: Row) -> String:
+    if r["age"] < 25:
+      "under 25"
+    else if r["age"] > 35:
+      "over 35"
+    else:
+      "25-35"
+    end
+    
 
 
 
