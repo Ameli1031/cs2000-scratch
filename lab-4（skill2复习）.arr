@@ -49,4 +49,32 @@ fun marketing-summary(r :: Row) -> String:
 add-marketing-summary = build-column(new-customers, "rating", marketing-summary)
 add-marketing-summary
 
+# Sample question: Design a function find-scholars that takes a table of students with "name" and "campus" columns and returns a new table containing only the students whose campus is not "Boston".
+
+#在做skill2 assessment时要记住，docstring只写在第一个后面，where就是test了，<>代表不相等，==代表相等，不要忘记filter-with，还有result，在table中要打“”因为是sting
+fun find-scholars(t :: Table) -> Table:
+  doc: "returns a new table containing only the students whose campus is not Boston"
+  
+  fun not-Boston(r :: Row) -> Boolean:
+    r["campus"] <> "Boston"
+  end
+  
+  filter-with(t, not-Boston)
+  
+where:
+  students = table: name, campus
+    row: "Sam", "Oakland"
+    row: "Lily", "Boston"
+    row: "Billie", "London"
+  end
+  
+  result = table: name, campus
+    row: "Sam", "Oakland"
+    row: "Billie", "London"
+  end
+  
+  find-scholars(students) is result
+end
+  
+  
   
