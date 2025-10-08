@@ -16,6 +16,7 @@ recipes = load-table: title :: String, servings :: Number, prep-time :: Number
   sanitize prep-time using num-sanitizer
   end
 recipes
+recipes.row-n(3)["prep-time"]
 
 #monthly crime dashoard
 crime = load-table: 
@@ -34,8 +35,8 @@ crime = load-table:
   sanitize Count using num-sanitizer
 end
 crime
-crime.row-n(5)
-crime.row-n(900)
+crime.row-n(99)
+
 
 
 
