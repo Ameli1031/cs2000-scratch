@@ -24,7 +24,7 @@ voter-with-independents = transform-column(
 #Exercise
 fun wrong-phone(s :: String) -> Boolean:
   if string-length > 12:
-    Flase,
+    Flase
   else:
     True
   end
@@ -32,5 +32,6 @@ fun wrong-phone(s :: String) -> Boolean:
   doc: "Removes non-digit characters from phone and returns 10-digit string"
   filter-with(voter-data, lam(r :: Row) -> Boolean: r["Phone"] end)
   end
+end
 
   
