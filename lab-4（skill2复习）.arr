@@ -76,5 +76,15 @@ where:
   find-scholars(students) is result
 end
   
-  
-  
+#passing-score
+fun passing-stu(t :: Table) -> List<String>: 
+  doc: "..."
+  fun is-pass(r :: Row) -> Boolean block:
+    if r["score"] > 70:
+      "passing"
+    else:
+      "fail"
+    end
+    all-rows(t)
+end
+end
