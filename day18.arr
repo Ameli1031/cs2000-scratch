@@ -34,7 +34,7 @@ end
 
 #3 Design a new data type for a Podcast, and based on your own knowledge figure out the fields that make sense to include in it
 data Podcast:
-  | podcast(title :: String, host :: String, duration :: Number, episodes :: Number, genre :: String)
+    podcast(title :: String, host :: String, duration :: Number, episodes :: Number, genre :: String)
 end
 p1 = podcast("Hello", "Ameli", 10, 1, "Fiction")
 
