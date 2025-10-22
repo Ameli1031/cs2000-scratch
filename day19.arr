@@ -113,4 +113,3 @@ where:
 
 #Write a function payment-summary that takes a PaymentMethod and returns a string: "Cash payment", "Card ending in XXXX" (last 4 digits), or "Check #NNNN" (check number)
 
-  
