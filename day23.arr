@@ -30,7 +30,6 @@ where:
   height(node(90, "Ryan", empty-leaf, empty-leaf)) is 1
 end
 
-
 fun retrieve(tree :: BST, given-key :: Number) -> Option<String>:
   doc: "retrieves the name of the person fro a given key if found"
 where:
